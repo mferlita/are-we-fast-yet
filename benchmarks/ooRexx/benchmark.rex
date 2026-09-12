@@ -20,17 +20,17 @@
 
 ::CLASS Benchmark PUBLIC
   ::METHOD innerBenchmarkLoop CLASS
-    USE ARG (innerIterations)
+    USE ARG innerIterations
     DO innerIterations
       RETURN .false unless .Benchmark~verifyResult(.Benchmark~benchmark)
     END
     RETURN .true
 
   ::METHOD benchmark CLASS
-    RAISE 'subclass_responsibility'
+    RAISE USER subclass_responsibility
 
   -- noinspection RubyUnusedLocalVariable
   ::METHOD verifyResult CLASS
     USE ARG result
-    RAISE 'subclass_responsibility'
+    RAISE USER subclass_responsibility
 
