@@ -19,18 +19,20 @@
 -- THE SOFTWARE.
 
 ::CLASS Benchmark PUBLIC
-  ::METHOD innerBenchmarkLoop CLASS
+  ::METHOD innerBenchmarkLoop
     USE ARG innerIterations
-    DO innerIterations
-      RETURN .false unless .Benchmark~verifyResult(.Benchmark~benchmark)
+
+    DO iteration = 1 TO innerIterations
+      IF \self~verifyResult(self~benchmark) THEN
+        RETURN .false
     END
+
     RETURN .true
 
-  ::METHOD benchmark CLASS
-    RAISE USER subclass_responsibility
+  ::METHOD benchmark
+    RAISE SYNTAX 88.900 ARRAY ('subclass responsibility')
 
-  -- noinspection RubyUnusedLocalVariable
-  ::METHOD verifyResult CLASS
+  ::METHOD verifyResult
     USE ARG result
-    RAISE USER subclass_responsibility
 
+    RAISE SYNTAX 88.900 ARRAY ('subclass responsibility')
