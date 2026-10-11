@@ -10,7 +10,7 @@
     result == 669
 
   ::METHOD sieve
-  USE ARG flags, size
+    USE ARG flags, size
     prime_count = 0
 
     LOOP i = 2 TO size

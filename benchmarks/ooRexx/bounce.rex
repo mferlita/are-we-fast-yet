@@ -1,8 +1,5 @@
 #!/usr/bin/env rexx
 
-::REQUIRES 'benchmark.rex'
-::REQUIRES 'som.rex'
---------------------------------------------------------------------------------
 ::CLASS Bounce SUBCLASS Benchmark
   ::METHOD benchmark
     random = RANDOM()
@@ -72,3 +69,6 @@
     END
 
     RETURN bounced
+--------------------------------------------------------------------------------
+::REQUIRES 'benchmark.rex'
+::REQUIRES 'som.rex'
