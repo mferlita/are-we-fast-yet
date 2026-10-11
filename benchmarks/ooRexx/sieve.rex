@@ -23,6 +23,7 @@
         END
       END
     END
-    prime_count
+
+    RETURN prime_count
 
 ::REQUIRES 'benchmark.rex'
